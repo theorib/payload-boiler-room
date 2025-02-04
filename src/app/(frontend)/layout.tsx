@@ -6,6 +6,7 @@ export const metadata = {
   title: 'Payload Blank Template',
 }
 
+// eslint-disable-next-line @typescript-eslint/require-await
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 

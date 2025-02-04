@@ -18,19 +18,20 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    exclude: ['chromium-bidi', 'sharp', 'fsevents'],
+    exclude: ['sharp'],
     include: ['file-type'],
     esbuildOptions: {
-      platform: 'node',
+      target: 'esnext',
+      // platform: 'node',
     },
   },
   build: {
     target: 'esnext', // This enables top-level await support
   },
-  resolve: {
-    conditions: ['import', 'node'],
-    alias: {
-      'file-type': 'file-type/browser',
-    },
-  },
+  // resolve: {
+  //   conditions: ['import', 'node'],
+  //   alias: {
+  //     'file-type': 'file-type/browser',
+  //   },
+  // },
 })

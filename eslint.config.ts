@@ -82,6 +82,10 @@ const eslintPluginReactRefreshRecommended = {
   name: 'eslint-config-react-refresh',
   files: [...NEXT_JSX_FILE_PATTERNS],
   ...reactRefresh.configs.recommended,
+  rules: {
+    ...reactRefresh.configs.recommended.rules,
+    'react-refresh/only-export-components': 'warn',
+  },
 } satisfies Linter.Config
 
 const [compilerConfigCompat] = compat.config({

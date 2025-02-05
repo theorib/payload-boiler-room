@@ -1,4 +1,4 @@
-import { defineWorkspace } from 'vitest/config';
+import { defineWorkspace } from 'vitest/config'
 
 export default defineWorkspace([
   {
@@ -16,10 +16,10 @@ export default defineWorkspace([
       include: ['src/**/*.{test,spec}.{ts,tsx}'],
       browser: {
         enabled: true,
-        headless: true,
+        headless: false,
         provider: 'playwright',
         instances: [{ browser: 'chromium' }],
       },
     },
   },
-]);
+])

@@ -11,6 +11,8 @@
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "preinstall": "npx only-allow pnpm",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json,js,jsx}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md,json,js,jsx}\"",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation eslint .",
     "lint:fix": "cross-env NODE_OPTIONS=--no-deprecation eslint . --fix",
     "lint:debug": "eslint . --debug",

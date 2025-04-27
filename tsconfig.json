@@ -22,7 +22,9 @@
       "@/*": ["./src/*"],
       "@payload-config": ["src/payload/payload.config.ts"]
     },
-    "target": "ES2022"
+
+    "target": "ES2022",
+    "types": ["@types/eslint__eslintrc"]
   },
   "include": [
     "eslint.config.ts",
@@ -30,7 +32,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "eslint.config.ts",
     "postcss.config.mjs",
     "next.config.ts"
   ],

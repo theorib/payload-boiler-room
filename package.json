@@ -12,6 +12,7 @@
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "preinstall": "npx only-allow pnpm",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation eslint .",
+    "lint:fix": "cross-env NODE_OPTIONS=--no-deprecation eslint . --fix",
     "lint:debug": "eslint . --debug",
     "lint:debug:prettier": "pnpm dlx eslint-config-prettier src/app/layout.tsx",
     "lint:inspector": "pnpm dlx @eslint/config-inspector@latest",

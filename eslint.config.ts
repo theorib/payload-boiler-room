@@ -7,7 +7,6 @@ import vitest from 'eslint-plugin-vitest'
 import pluginNext from '@next/eslint-plugin-next'
 import react from 'eslint-plugin-react'
 import globals from 'globals'
-// @ts-expect-error there are no type definitions for this
 import reactHooks from 'eslint-plugin-react-hooks'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 // @ts-expect-error there are no type definitions for this

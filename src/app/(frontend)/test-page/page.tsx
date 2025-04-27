@@ -8,7 +8,9 @@ export default function TestPage() {
     <div>
       <h1>Test Page Heading</h1>
       <p>Counter: {count}</p>
-      <button onClick={() => setCount((currentCount) => currentCount + 1)}>Increase Count</button>
+      <button onClick={() => setCount(currentCount => currentCount + 1)}>
+        Increase Count
+      </button>
     </div>
   )
 }

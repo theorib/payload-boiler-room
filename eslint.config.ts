@@ -30,12 +30,24 @@ const TSX_FILE_PATTERNS = ['**/*.?(c|m)ts?(x)']
 const JSX_FILE_PATTERNS = ['**/*.?(c|m)js?(x)']
 const NEXT_JSX_FILE_PATTERNS = ['src/**/*.?(c|m)[jt]s?(x)']
 
-const TEST_FILE_PATTERNS_JS = ['**/__tests__/**/*.?(c|m)js?(x)', '**/*.(spec|test).?(c|m)js?(x)']
-const TEST_FILE_PATTERNS_TS = ['**/__tests__/**/*.?(c|m)ts?(x)', '**/*.(spec|test).?(c|m)ts?(x)']
+const TEST_FILE_PATTERNS_JS = [
+  '**/__tests__/**/*.?(c|m)js?(x)',
+  '**/*.(spec|test).?(c|m)js?(x)',
+]
+const TEST_FILE_PATTERNS_TS = [
+  '**/__tests__/**/*.?(c|m)ts?(x)',
+  '**/*.(spec|test).?(c|m)ts?(x)',
+]
 
 const TEST_FILE_PATTERNS = [...TEST_FILE_PATTERNS_JS, ...TEST_FILE_PATTERNS_TS]
 
-const IGNORE_PATTERNS = ['.next/**', 'node_modules', 'node_modules/**', 'dist/**', 'coverage/**']
+const IGNORE_PATTERNS = [
+  '.next/**',
+  'node_modules',
+  'node_modules/**',
+  'dist/**',
+  'coverage/**',
+]
 
 /** @type {import('eslint').Linter.Config} */
 const eslintPluginReactRecommended = {
@@ -123,7 +135,10 @@ const eslintPluginNextRecommended = {
 
   rules: {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    ...(pluginNext?.configs?.recommended?.rules as Record<string, Linter.RuleEntry>),
+    ...(pluginNext?.configs?.recommended?.rules as Record<
+      string,
+      Linter.RuleEntry
+    >),
   },
   files: [...NEXT_JSX_FILE_PATTERNS],
 } satisfies Linter.Config
@@ -330,7 +345,10 @@ const eslintConfig = tseslint.config(
       },
     },
     rules: {
-      'react-refresh/only-export-components': ['off', { allowConstantExport: true }],
+      'react-refresh/only-export-components': [
+        'off',
+        { allowConstantExport: true },
+      ],
       '@typescript-eslint/array-type': ['error', { default: 'generic' }],
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-floating-promises': [

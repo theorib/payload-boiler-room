@@ -23,8 +23,7 @@
       "@payload-config": ["src/payload/payload.config.ts"]
     },
 
-    "target": "ES2022",
-    "types": ["@types/eslint__eslintrc"]
+    "target": "ES2022"
   },
   "include": [
     "eslint.config.ts",

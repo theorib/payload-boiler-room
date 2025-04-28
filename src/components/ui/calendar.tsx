@@ -64,6 +64,11 @@ function Calendar({
     />
   )
 }
+
+/**
+ * Fix for Calender UI is messed up after updating to react-day-picker
+ * @see {@link https://github.com/shadcn-ui/ui/issues/5799}
+ */
 function Chevron({
   orientation = 'left',
   className,

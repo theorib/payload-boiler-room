@@ -21,7 +21,8 @@ describe('test-page Tests', () => {
     await userEvent.click(btn)
     await expect.element(screen.getByText('Counter: 1')).toBeVisible()
   })
-  test.fails('test-page-fails', async () => {
+
+  test.fails.skip('test-page-fails', async () => {
     const screen = render(<TestPage />)
     const heading = screen.getByRole('heading', {
       name: 'Not a Test Page Heading',

@@ -17,7 +17,7 @@
     "lint:debug": "eslint . --debug",
     "lint:debug:prettier": "pnpm dlx eslint-config-prettier src/app/layout.tsx",
     "lint:debug:timing": "TIMING=1 eslint",
-    "lint:fix": "cross-env NODE_OPTIONS=--no-deprecation eslint . --fix",
+    "lint:fix": "eslint . --fix",
     "lint:inspect": "pnpm dlx @eslint/config-inspector@latest",
     "lint:next": "next lint",
     "packages:sort": "pnpm dlx sort-package-json",

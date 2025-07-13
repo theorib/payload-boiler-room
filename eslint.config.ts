@@ -12,7 +12,6 @@ import jestDom from 'eslint-plugin-jest-dom'
 import next from '@next/eslint-plugin-next'
 import globals from 'globals'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
-// @ts-expect-error there are no type definitions for this
 import importPlugin from 'eslint-plugin-import'
 import { FlatCompat } from '@eslint/eslintrc'
 import { fixupPluginRules } from '@eslint/compat'
@@ -170,7 +169,7 @@ const reactHooksRecommended = {
 } satisfies Config
 
 /**
- * Since eslint-plugin-react-hooks@6.0.0-rc.1,  eslint-plugin-react-compiler was merged into eslint-plugin-react-hooks.
+ * Since eslint-plugin-react-hooks\@6.0.0-rc.1,  eslint-plugin-react-compiler was merged into eslint-plugin-react-hooks.
  * @see {@link https://react.dev/blog/2025/04/21/react-compiler-rc}
  */
 

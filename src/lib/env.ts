@@ -3,7 +3,7 @@ import { z } from 'zod'
 
 export const env = createEnv({
   server: {
-    DATABASE_URI: z.string().url(),
+    DATABASE_URI: z.string(),
     PAYLOAD_SECRET: z.string().min(20),
   },
   client: {

@@ -19,7 +19,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ['sharp'],
-    include: ['file-type'],
+    include: ['file-type', 'next/image', 'next/font/google'],
     esbuildOptions: {
       target: 'esnext',
       // platform: 'node',
